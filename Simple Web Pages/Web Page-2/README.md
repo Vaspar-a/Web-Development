@@ -1,0 +1,1 @@
+Another simple web page
