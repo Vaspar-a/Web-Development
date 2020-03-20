@@ -1,0 +1,167 @@
+div,h1,h3,input,select,button,label{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+fieldset{
+	border: 2px solid royalblue;
+	border-radius: 15px;
+	width: 800px;
+	height: 430px;
+	margin: 30px auto;
+	margin-top: 30px;
+}
+
+fieldset legend{
+	font-size: 25px;
+}
+
+fieldset h1{
+	font-size: 36px;
+}
+
+#layout{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Sen', sans-serif;
+	color: #3B3B3B;
+}
+
+.field{
+	flex: auto;
+	margin-top: 5px;
+}
+
+.input{
+	position: relative;
+	width: 800px;
+	height: 50px;
+}
+
+.input input, select{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #3B3B3B;
+	outline: none;
+	color: white;
+	box-shadow: inset 0 0 0 30px white; 
+	width: 100%;
+	height: 100%;
+    padding-top: 25px;
+    font-family: 'Sen', sans-serif;
+    font-size: 16px;
+	transition: border-bottom 0.5s ease;
+}
+
+option{
+    padding-left: 0%;
+}
+
+select, .input input[type=date]{
+    cursor: pointer;
+    padding-left: 55px;
+    font-size: 20px;
+    color: #3B3B3B;
+}
+
+.input button{
+	margin-top: 20px;
+	height: 50px;
+	width: 100px;
+	border-radius: 7px;
+	line-height: 50px;
+	font-size: 16px;
+	background-color: dodgerblue;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border: none;
+	box-shadow: 0 4px 0 lightblue;
+	outline: none;
+	cursor: pointer;
+	display: block;
+}
+
+.input input::placeholder{
+	color: white;
+}
+
+.input input[type=date]{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #3B3B3B;
+	outline: none;
+	color: white;
+	box-shadow: inset 0 0 0 30px white; 
+	width: 100%;
+	height: 100%;
+	padding-top: 25px;
+	font-size: 16px;
+	transition: border-bottom 0.5s ease;
+}
+
+label{
+	display: inline;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transform: translateY(0);
+	transition: transform 0.5s ease;
+}
+
+.input input:focus, .input input:not([type=date]):not(:placeholder-shown), select:focus{
+	border-bottom: 2px solid blue;
+	color: black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.input input[type=date]:focus, .input input[type=date]:valid{
+	border-bottom: 2px solid blue;
+	color: black;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.input input:focus + label,
+.input input:not([type=date]):not(:placeholder-shown) + label,
+.input input[type=date]:focus + label,
+.input input[type=date]:valid + label, 
+select:focus + label{
+	display: inline;
+	color: blue;
+	/* height: 22.4px; */
+	transform: translateY(-100%);
+}
+
+select:focus + label{
+    display: inline;
+    color: blue;
+    transform: none;
+}
+
+.input button:active{
+	position: absolute;
+	top: 4px;
+	box-shadow: unset;
+}
+
+@media screen and (max-width: 1000px){
+	fieldset, .input{
+		width: 600px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	fieldset, .input{
+		width: 400px;
+		font-size: 20px;
+	}
+}
