@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    min-height: 75px;
+    height: 75px;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.637);
+}
+
+header img{
+    position: relative;
+    z-index: -5;
+    margin: auto 12%;
+    width: 100px;
+    background-color: transparent;
+    height: 75px;
+}
+
+#layout{
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+#inner-layout{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.col-1{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.col-1 #img{
+    background-image: url('https://i.pinimg.com/originals/f8/30/e6/f830e639764a93e4edb984bb7ce814e0.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 2px solid black; */
+    /* box-shadow: 0 0 5px grey; */
+    height: 400px;
+    width: 400px;
+}
+
+.col-2{
+    width: 45%;
+    height: 600px;
+    text-align: left;
+    /* border: 2px solid black; */
+}
+
+.col-2 h3{
+    border-bottom: 2px solid black;
+    font-size: 34px;
+    color: rgb(87, 84, 84);
+    margin-bottom: 1em;
+}
+
+.col-2 p, .walk p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(128, 128, 128, 0.966);
+    margin-bottom: 1em;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin: 2% 10%;
+    margin-left: 0%;
+}
+
+.skill p{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+    /* text-shadow: 0 0 10px whitesmoke; */
+    top: 40%;
+    width: 100%;
+}
+
+.s1{
+    background-color: rgba(239, 255, 8, 0.884);
+}
+
+.s2{
+    background-color: rgba(61, 216, 243, 0.884);
+}
+
+.s2 p{
+    top: 25%;
+}
+
+.s3{
+    background-color: rgba(128, 54, 247, 0.884);
+}
+
+.s4{
+    background-color: rgba(8, 255, 119, 0.884);
+}
+
+.s5{
+    background-color: rgba(255, 162, 23, 0.884);
+}
+
+.s6{
+    background-color: rgba(136, 17, 116, 0.884);
+}
+
+.s7{
+    background-color: rgba(21, 122, 12, 0.884);
+}
+
+.s8{
+    background-color: rgba(5, 49, 63, 0.884);
+}
+
+.s9{
+    background-color: rgba(101, 136, 3, 0.884);
+}
+
+.col-3{
+    width: 20%;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+
+.col-3 .walk{
+    position: relative;
+    top: -100px;
+    background-image: url('https://2.bp.blogspot.com/-ZuJVOT9kZA4/ULdLYYXj8vI/AAAAAAAAAlY/dTn-P_lsODA/s1600/Walking+Man+with+arms.gif');
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.walk h4{
+    position: absolute;
+    transform: rotate(-50deg);
+    font-size: 18px;
+    bottom: 200px;
+    left: 35px;
+    opacity: 0.1;
+    letter-spacing: 20px;
+    width: 100%;
+    word-wrap: break-word;
+    /* overflow-wrap: break-word; */
+}
+
+.col-3 p{
+    position: absolute;
+    bottom: 0em;
+    left: 2vw;
+    padding: 0vh 1vw;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1000px){
+     .walk h4{
+        position: absolute;
+        transform: rotate(-50deg);
+        font-size: 18px;
+        bottom: 200px;
+        left: 35px;
+        opacity: 0.1;
+        letter-spacing: 9px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+    
+    .col-1{
+        width: 30%;
+    }
+
+    .col-2{
+        width: 45%;
+    }
+
+    .col-3{
+        width: 25%;
+    }
+
+    .skill{
+        width: 100px;
+        height: 100px;
+    }
+
+    .s2 p{
+        position: absolute;
+        top: 25%;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    #layout h1{
+        font-size: 30px;
+    }
+    
+    .col-1{
+        width: 30%;
+    }
+
+    .col-2{
+        width: 35%;
+    }
+
+    .col-3{
+        width: 35%;
+    }
+
+    .col-3 h4{
+        position: absolute;
+        transform: rotate(-65deg);
+        font-size: 18px;
+        bottom: 200px;
+        left: 35px;
+        opacity: 0.1;
+        letter-spacing: 10px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .skill{
+        width: 100px;
+        height: 100px;
+    }
+
+    .s2 p{
+        position: absolute;
+        top: 25%;
+    }
+}
